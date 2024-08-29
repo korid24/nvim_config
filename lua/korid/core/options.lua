@@ -4,7 +4,7 @@ local opt = vim.opt -- for conciseness
 
 -- mouse
 opt.mouse = "a"
-opt.mousehide = true
+opt.mousefocus = true
 
 -- line numbers
 -- opt.relativenumber = true -- show relative line numbers

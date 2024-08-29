@@ -85,46 +85,17 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["pyright"] = function ()
-        lspconfig.pyright.setup {
-          capabilities = capabilities,
-          -- on_attach = on_attach,
-          on_new_config = function(config, root_dir)
-            local env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; poetry env info -p 2>/dev/null'))
-            if string.len(env) > 0 then
-              config.settings.python.pythonPath = env .. '/bin/python'
-            end
-          end
-        }
-      end,
-      -- ["svelte"] = function()
-      --   -- configure svelte server
-      --   lspconfig["svelte"].setup({
+      -- ["basedpyright"] = function ()
+      --   lspconfig.pyright.setup {
       --     capabilities = capabilities,
-      --     on_attach = function(client, bufnr)
-      --       vim.api.nvim_create_autocmd("BufWritePost", {
-      --         pattern = { "*.js", "*.ts" },
-      --         callback = function(ctx)
-      --           -- Here use ctx.match instead of ctx.file
-      --           client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-      --         end,
-      --       })
-      --     end,
-      --   })
-      -- end,
-      -- ["graphql"] = function()
-      --   -- configure graphql language server
-      --   lspconfig["graphql"].setup({
-      --     capabilities = capabilities,
-      --     filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-      --   })
-      -- end,
-      -- ["emmet_ls"] = function()
-      --   -- configure emmet language server
-      --   lspconfig["emmet_ls"].setup({
-      --     capabilities = capabilities,
-      --     filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-      --   })
+      --     -- on_attach = on_attach,
+      --     on_new_config = function(config, root_dir)
+      --       local env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; poetry env info -p 2>/dev/null'))
+      --       if string.len(env) > 0 then
+      --         config.settings.python.pythonPath = env .. '/bin/python'
+      --       end
+      --     end
+        -- }
       -- end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)

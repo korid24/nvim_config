@@ -25,15 +25,7 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "lua_ls",
-        "pyright",
-        -- "tsserver",
-        -- "html",
-        -- "cssls",
-        -- "tailwindcss",
-        -- "svelte",
-        -- "graphql",
-        -- "emmet_ls",
-        -- "prismals",
+        "basedpyright",
       },
     })
   end,
