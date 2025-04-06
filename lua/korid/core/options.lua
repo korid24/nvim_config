@@ -16,7 +16,7 @@ opt.shiftwidth = 4 -- 4 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.scrolloff = 5 -- scroll if cursor near the start or the end of the window
-opt.colorcolumn = "119"
+opt.colorcolumn = "120"
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
