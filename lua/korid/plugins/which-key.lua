@@ -1,11 +1,10 @@
 local function config()
-    wk = require("which-key")
-    wk.add({
+    require("which-key").add({
       { "<leader>f", group = "Telescope" },
       { "<leader>e", group = "File Manager" },
+      { "<leader>h", group = "Git actions" },
       { "<leader>b", group = "buffers", expand = function() return require("which-key.extras").expand.buf() end},
     })
-    
 end
 
 return {
