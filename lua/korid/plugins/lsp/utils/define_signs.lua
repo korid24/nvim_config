@@ -13,5 +13,9 @@ vim.diagnostic.config({
             [vim.diagnostic.severity.HINT] = "Hint",
         },
     },
+    virtual_text = {
+        severity = { min = vim.diagnostic.severity.ERROR },
+    },
+    virtual_lines = false,
 })
 

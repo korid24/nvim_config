@@ -20,7 +20,9 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
-        -- "basedpyright",
+        "basedpyright", -- python lsp
+        "ruff", -- python lint & format
+        "gopls", -- go lsp
       },
       automatic_installation = false,
     })

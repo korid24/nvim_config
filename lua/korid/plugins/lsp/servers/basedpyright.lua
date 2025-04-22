@@ -21,6 +21,12 @@ function M.setup_based_pyright(capabilities)
                         typeCheckingMode = "strict",
                         diagnosticSeverityOverrides = {
                             reportUnusedVariable = "warning",
+                            reportUnknownMemberType = "warning",
+                            reportUnknownParameterType = "warning",
+                            reportMissingTypeArgument = "warning",
+                            reportUnknownVariableType = "warning",
+                            reportUnusedFunction = "warning",
+                            reportUnknownLambdaType = false,
                             reportMissingTypeStubs = false,
                         }
                     },
