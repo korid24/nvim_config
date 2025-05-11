@@ -28,8 +28,9 @@ vim.keymap.set("n", "<leader>ef", "<cmd>Neotree reveal<CR>", { desc = "Toggle fi
 vim.keymap.set("n", "<leader>ec", "<cmd>Neotree close<CR>", { desc = "Collapse file explorer" })
 
 -- buffers
-vim.keymap.set("n", "<leader>b>", "<cmd>bnext<CR>", {desc = "Next buffer"})
-vim.keymap.set("n", "<leader>b<", "<cmd>bprevious<CR>", {desc = "Previous buffer"})
 vim.keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", {desc = "Close buffer"})
 vim.keymap.set("n", "<leader>bX", "<cmd>bdelete!<CR>", {desc = "Force close buffer"})
+
+-- formatter
+-- TODO: add key for `:Format`
 

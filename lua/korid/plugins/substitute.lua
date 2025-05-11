@@ -7,8 +7,6 @@ return {
     substitute.setup()
 
     -- set keymaps
-    local keymap = vim.keymap -- for conciseness
-
     vim.keymap.set("n", "<leader>r", substitute.operator, { desc = "Substitute with motion" })
     vim.keymap.set("n", "<leader>rr", substitute.line, { desc = "Substitute line" })
     vim.keymap.set("n", "<leader>rR", substitute.eol, { desc = "Substitute to end of line" })

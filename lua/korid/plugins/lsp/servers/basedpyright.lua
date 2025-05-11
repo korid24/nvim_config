@@ -4,16 +4,17 @@ local lspconfig = require("lspconfig")
 local venv_finder = require("korid.internal.python_venv_finder")
 
 function M.setup_based_pyright(capabilities)
-    return function (server_name)
+    return function(server_name)
         lspconfig.basedpyright.setup({
-            cmd = { "basedpyright-langserver" , "--stdio" },
-            capabilities=capabilities,
+            cmd = { "basedpyright-langserver", "--stdio" },
+            capabilits = capabilities,
             root_dir = function(fname)
                 return venv_finder.find_project_root(fname and vim.fn.bufnr(fname))
             end,
             settings = {
                 basedpyright = {
                     analysis = {
+                        allowedUntypedLibraries = { "celery", "Celery" },  -- TODO: not works
                         autoSearchPaths = true,
                         useLibraryCodeForTypes = true,
                         diagnosticMode = 'openFilesOnly',
@@ -28,6 +29,7 @@ function M.setup_based_pyright(capabilities)
                             reportUnusedFunction = "warning",
                             reportUnknownLambdaType = false,
                             reportMissingTypeStubs = false,
+                            reportUnusedImport = false,
                         }
                     },
                 },
@@ -40,8 +42,7 @@ function M.setup_based_pyright(capabilities)
                 new_config.settings.python.pythonPath = venv_finder.get_python_path()
             end
         })
-        end
+    end
 end
 
 return M
-

@@ -3,6 +3,9 @@ local function config()
       { "<leader>f", group = "Telescope" },
       { "<leader>e", group = "File Manager" },
       { "<leader>h", group = "Git actions" },
+      { "<leader><leader>d", group = "Debug" },
+      { "<leader>x", group = "Trouble" },
+      { "<leader>w", group = "Sessions" },
       { "<leader>b", group = "buffers", expand = function() return require("which-key.extras").expand.buf() end},
     })
 end
