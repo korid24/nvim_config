@@ -1,5 +1,11 @@
 local function config()
-    vim.keymap.set("n", "<leader>hw", "<cmd>Neogit kind=floating<CR>", {desc = "Open neogit floating window"})
+    vim.keymap.set("n", "<leader>hw", "<cmd>Neogit kind=floating<CR>", { desc = "Open neogit floating window" })
+    require("neogit").setup{
+        integrations = {
+            -- telescope = true,
+            diffview = true,
+        },
+    }
 end
 
 return {
@@ -9,5 +15,5 @@ return {
         "sindrets/diffview.nvim",
         "nvim-telescope/telescope.nvim",
     },
-    config=config,
+    config = config,
 }

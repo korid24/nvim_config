@@ -40,7 +40,7 @@ function M.config()
             },
         },
         window = {
-            position = "right",
+            position = "float",
             width = 35,
         },
         filesystem = {

@@ -23,5 +23,7 @@ return {
 
         setup_default("gopls")
         setup_default("ruff")
+        setup_default("yamlls")
+        setup_default("yamlfmt")
     end,
 }

@@ -8,20 +8,22 @@ function M.setup_python_dap()
     local configs = require("dap").configurations.python
 
     table.insert(configs, {
-      type = 'python',
-      request = 'launch',
-      name = 'common app',
-      module = 'app',
-      env = {PROJECT_ENV = "local"}
+        type = 'python',
+        justMyCode = false,
+        request = 'launch',
+        name = 'common app',
+        module = 'app',
+        env = { PROJECT_ENV = "local" }
     })
 
     table.insert(configs, {
-      type = 'python',
-      request = 'launch',
-      name = 'celery',
-      module = 'celery',
-      args = {"-A", "app.worker", "worker", "--beat", "-s", "local/schedule"},
-      env = {PROJECT_ENV = "local"}
+        type = 'python',
+        justMyCode = false,
+        request = 'launch',
+        name = 'celery',
+        module = 'celery',
+        args = { "-A", "app.worker", "worker", "--beat", "-s", "local/schedule" },
+        env = { PROJECT_ENV = "local" }
     })
 end
 

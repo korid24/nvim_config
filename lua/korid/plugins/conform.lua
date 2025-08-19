@@ -3,6 +3,8 @@ local function config()
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'ruff_format' },
+      yaml = { 'yamlfmt' },
+      yml = { 'yamlfmt' },
     },
   })
 
